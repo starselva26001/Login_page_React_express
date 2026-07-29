@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg,rgba(15, 23, 42, 1) 0%, rgba(49, 46, 129, 1) 58%);
+}
+.main-container{
+  background-color: white;
+  
+}
+.login-title{
+  text-align: center;
+  font-size: 3rem;
+  color:rgba(49, 46, 129, 1);
+  text-transform: capitalize;
+  margin-bottom: 15px;
+
+}
+.container{
+  width: 400px;
+  height: 350px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow:
+0px 10px 35px rgba(0,0,0,.25);
+
+}
+.login-card{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  height: 70%;
+  justify-content: center;
+  
+}
+.login-card input{
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  outline: none;
+  border: gray 1px solid;
+  font-size: 1.2em;
+  
+  
+
+}
+.login-card button{
+  background-color: #4F46E5;
+  padding: 13px;
+  width: 100%;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.login-card button:hover{
+  transform: translateY(-2px);
+  background-color: #110e53;
+}
+.login-card p{
+  color: rgb(161, 35, 35);
+}
+.login-failed{
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Dashboard components */
+
+.dashboard-page{
+  color: white;
+  font-size: calc(4rem);
+}
