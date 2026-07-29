@@ -27,6 +27,8 @@ app.post("/login", function(req, res){
     }
 })
 
-app.listen(3000,function(){
-    console.log("server started...")
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT,function(){
+    console.log(`server started on port ${PORT}`)
 })
