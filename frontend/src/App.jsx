@@ -52,42 +52,42 @@ function App() {
       return
     }
 
-    const loginDetails = axios.post(`https://login-page-react-express.onrender.com/login`, { "email": userEmail, "password": password })
-    loginDetails.then(function (data) {
-      console.log(data)
+      const loginDetails = axios.post(`https://login-page-react-express.onrender.com/login`, { "email": userEmail, "password": password })
+      loginDetails.then(function (data) {
+        console.log(data)
 
-      if (data.data.success === true) {
-        navigate("/success")
-        setEmailError("");
-        setPassError("");
-        setLoginError("");
-      }
-      else if (data.data.success === false)
-      {
-        setLoginError(data.data.message)
-      }
+        if (data.data.success === true) {
+          navigate("/success")
+          setEmailError("");
+          setPassError("");
+          setLoginError("");
+        }
+        else if (data.data.success === false)
+        {
+          setLoginError(data.data.message)
+        }
 
-    })
-
-
+      })
 
 
 
-  }
-  return (
-    <div className='container'>
-      <h1 className='login-title'>login page</h1>
-      <div className='login-card'>
-        <input type="text" placeholder='Email' name='email' onChange={handleEmail} />
-        <p>{emailError}</p>
-        <input type="password" placeholder='password' name='password' onChange={handlePass} />
-        <p>{passError}</p>
-        <p className='login-failed'>{loginError}</p>
 
-        <button onClick={handleLogin}>Login</button>
+
+    }
+    return (
+      <div className='container'>
+        <h1 className='login-title'>login page</h1>
+        <div className='login-card'>
+          <input type="text" placeholder='Email' name='email' onChange={handleEmail} />
+          <p>{emailError}</p>
+          <input type="password" placeholder='password' name='password' onChange={handlePass} />
+          <p>{passError}</p>
+          <p className='login-failed'>{loginError}</p>
+
+          <button onClick={handleLogin}>Login</button>
+        </div>
       </div>
-    </div>
-  )
-}
+    )
+  }
 
-export default App
+  export default App
